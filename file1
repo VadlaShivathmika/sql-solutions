@@ -1,0 +1,6 @@
+-- Problem: Managers with at Least 5 Direct Reports
+-- Platform: LeetCode
+-- Concept: WHERE clause
+
+SELECT E1.NAME FROM EMPLOYEE E1
+WHERE (SELECT COUNT(*) FROM EMPLOYEE E2 WHERE E1.ID=E2.MANAGERID)>=5;
